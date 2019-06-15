@@ -8,7 +8,7 @@ from properties.items import PropertiesItem
 class HouseSpider(scrapy.Spider):
 	name = 'house'
 	allowed_domains = ["db"]
-	start_urls = ['https://db.house.qq.com/bj_186053/']
+	start_urls = ['https://db.house.qq.com/cq_151907/']
 
 	def parse(self, response):
 		# 直接在日志中输出结果 方式：
@@ -37,8 +37,8 @@ class HouseSpider(scrapy.Spider):
 		dl.add_value('url',response.url)
 		dl.add_value('spider', self.name)
 		dl.add_value('server', socket.gethostname())
-		dl.add_value('date', datetime.datetime.now())
-
-		return dl.load_item()
+		dl.add_value('h_date', datetime.datetime.now())
+		#item =  dl.load_item()
+		yield dl.load_item()
 
 

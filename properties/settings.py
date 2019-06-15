@@ -64,10 +64,16 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'properties.pipelines.PropertiesPipeline': 300,
-#}
-
+ITEM_PIPELINES = {
+	#'properties.pipelines.PropertiesPipeline': 300,
+	'properties.pipelines.HousePipeline':301,
+}
+MYSQL_HOST = 'localhost'
+MYSQL_DATABASE = 'scrapy_study'
+MYSQL_USER = 'root'
+MYSQL_PASS = 'pjc621'
+MYSQL_PORT = 3306
+MYSQL_CHARSET='utf8'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

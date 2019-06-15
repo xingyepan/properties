@@ -28,7 +28,7 @@ class PropertiesItem(Item):
     project = Field()
     spider =Field()
     server = Field()
-    date = Field()
+    h_date = Field()
 
 
 

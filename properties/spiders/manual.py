@@ -43,5 +43,5 @@ class HouseSpider(scrapy.Spider):
 		# dl.add_value('url',response.url)
 		dl.add_value('spider', self.name)
 		dl.add_value('server', socket.gethostname())
-		dl.add_value('date', datetime.datetime.now())
+		dl.add_value('h_date', datetime.datetime.now())
 		return dl.load_item()
