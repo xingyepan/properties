@@ -17,7 +17,7 @@ class ManualSpider(scrapy.Spider):
 			Request(li)
 		#用处理器进行处理  更强大
 		dl = ItemLoader(item = PropertiesItem1(),response = response)
-		dl.add_xpath('h_name','//*[@id="baseinfo_top_layout"]/div[1]/div[1]/div[1]/h2/text()')
+		dl.add_xpath('house_name','//*[@id="baseinfo_top_layout"]/div[1]/div[1]/div[1]/h2/text()')
 		dl.add_xpath('price','//*[@id="baseinfo_top_layout"]/div[3]/div[2]/div/div[1]/h2/span/text()')
 		dl.add_xpath('tell_num', '//*[@id="baseinfo_top_layout"]/div[3]/div[2]/div/div[2]/i/text()')
 		dl.add_xpath('address', '//*[@id="baseinfo_top_layout"]/div[3]/div[2]/div/ul[2]/li[1]/text()')

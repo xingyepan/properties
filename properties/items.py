@@ -34,8 +34,7 @@ class PropertiesItem(Item):
 class PropertiesItem1(Item):
 	# define the fields for your item here like:
 	# name = scrapy.Field()
-
-	h_name = Field()
+	house_name = Field()
 	price = Field()
 	tell_num = Field()
 	address = Field()

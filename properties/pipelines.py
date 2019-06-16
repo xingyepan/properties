@@ -71,8 +71,8 @@ class ManualPipeline(object):
 		self.cursor = self.db.cursor()
 
 	def process_item(self,item,spider):
-		sql = "insert into house_list_cq (h_name,price,tell_num,address,open_date,check_in_date,property_type,period,Build_category,Open_hair,proper_mana_comp,Thing_industry_fee,product_rate,green_rate,households_num,decoration_situ) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-		self.cursor.execute(sql,(item['h_name'],item['price'],item['tell_num'],item['address'],item['open_date'],item['check_in_date'],item['property_type'],
+		sql = "insert into house_list_cq (house_name,price,tell_num,address,open_date,check_in_date,property_type,period,Build_category,Open_hair,proper_mana_comp,Thing_industry_fee,product_rate,green_rate,households_num,decoration_situ) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+		self.cursor.execute(sql,(item['house_name'],item['price'],item['tell_num'],item['address'],item['open_date'],item['check_in_date'],item['property_type'],
 								 item['period'],item['Build_category'],item['Open_hair'],item['proper_mana_comp'],item['Thing_industry_fee'],item['product_rate'],
 								 item['green_rate'],item['households_num'], item['decoration_situ'])
 							)
