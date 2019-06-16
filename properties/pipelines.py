@@ -44,7 +44,8 @@ class HousePipeline(object):
 	def colse_spider(self,spider):
 		self.db.close()
 '''
-#Manual's Pipeline
+
+
 class ManualPipeline(object):
 	def __init__(self, host, database, user, password, port):
 		self.host = host
@@ -80,3 +81,4 @@ class ManualPipeline(object):
 		return item
 	def colse_spider(self,spider):
 		self.db.close()
+

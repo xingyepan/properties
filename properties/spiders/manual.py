@@ -8,7 +8,7 @@ from urllib import parse
 class ManualSpider(scrapy.Spider):
 	name = "manual"
 	allowed_domains = ["db"]
-	start_urls = ['https://db.house.qq.com/index.php?mod=search&city=cq#LXNob3d0eXBlXzEtcGFnZV80']
+	start_urls = ['https://db.house.qq.com/index.php?mod=search%26city=cq#LXNob3d0eXBlXzEtcGFnZV80']
 
 	def parse(self, response):
 		#Get the next index URLs and yield Requests

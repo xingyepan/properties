@@ -13,10 +13,10 @@ class PropertiesItem(Item):
 	# name = scrapy.Field()
 
 	#Primary fileds
-	title = Field()
-	price = Field()
-	description = Field()
 	address = Field()
+	price = Field()
+	title = Field()
+	description = Field()
 	image_urls = Field()
 
 	#Calculated fields
