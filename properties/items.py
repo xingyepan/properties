@@ -9,26 +9,50 @@
 from scrapy.item import Item,Field
 
 class PropertiesItem(Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+	# define the fields for your item here like:
+	# name = scrapy.Field()
 
-    #Primary fileds
-    title = Field()
-    price = Field()
-    description = Field()
-    address = Field()
-    image_urls = Field()
+	#Primary fileds
+	title = Field()
+	price = Field()
+	description = Field()
+	address = Field()
+	image_urls = Field()
 
-    #Calculated fields 
-    images = Field()
-    location = Field()
+	#Calculated fields
+	images = Field()
+	location = Field()
 
-    #Housekeeping fields 
-    url = Field()
-    project = Field()
-    spider =Field()
-    server = Field()
-    h_date = Field()
+	#Housekeeping fields
+	url = Field()
+	project = Field()
+	spider =Field()
+	server = Field()
+	h_date = Field()
+
+
+class PropertiesItem1(Item):
+	# define the fields for your item here like:
+	# name = scrapy.Field()
+
+	h_name = Field()
+	price = Field()
+	tell_num = Field()
+	address = Field()
+	open_date = Field()
+	check_in_date = Field()
+	property_type = Field()
+	period = Field()
+	Build_category = Field()
+	Open_hair = Field()
+	proper_mana_comp = Field()
+	Thing_industry_fee = Field()
+	product_rate = Field()
+	green_rate = Field()
+	households_num = Field()
+	decoration_situ = Field()
+
+
 
 
 

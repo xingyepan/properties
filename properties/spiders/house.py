@@ -8,7 +8,7 @@ from properties.items import PropertiesItem
 class HouseSpider(scrapy.Spider):
 	name = 'house'
 	allowed_domains = ["db"]
-	start_urls = ['https://db.house.qq.com/cq_151907/']
+	start_urls = ['https://db.house.qq.com/cq_189344/']
 
 	def parse(self, response):
 		# 直接在日志中输出结果 方式：
