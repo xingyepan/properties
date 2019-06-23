@@ -66,8 +66,8 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 	#'properties.pipelines.PropertiesPipeline': 300,
-	#'properties.pipelines.HousePipeline':302,
-	'properties.pipelines.ManualPipeline':301,
+	'properties.pipelines.HousePipeline':301,
+	'properties.pipelines.ManualPipeline':300,
 }
 MYSQL_HOST = 'localhost'
 MYSQL_DATABASE = 'scrapy_study'

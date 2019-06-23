@@ -50,7 +50,7 @@ class PropertiesItem1(Item):
 	green_rate = Field()
 	households_num = Field()
 	decoration_situ = Field()
-
+	url = Field()
 
 
 

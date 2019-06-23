@@ -3,13 +3,13 @@ import scrapy
 from scrapy.loader import ItemLoader
 from properties.items import PropertiesItem1
 from scrapy.http import Request
-from urllib import parse
 
 class ManualSpider(scrapy.Spider):
 	name = "manual"
 	allowed_domains = ["db"]
-	start_urls = ['https://db.house.qq.com/index.php?mod=search%26city=cq#LXNob3d0eXBlXzEtcGFnZV80']
-
+	url = 'https://db.house.qq.com'
+	#start_urls = ['https://db.house.qq.com/index.php?mod=search&city=cq']
+	start_urls =  [url]
 	def parse(self, response):
 		#Get the next index URLs and yield Requests
 		li_list = response.xpath('//*[@id="search_result_list"]//li[@class="address"]/a/@href').extract()
@@ -41,5 +41,6 @@ class ManualSpider(scrapy.Spider):
 		#dl.add_xpath('price','//*[@id="baseinfo_top_layout"]/div[3]/div[2]/div/div[1]/h2/span/strong/text()')
 
 		#add_value()  方法 获取python 计算获取的单个值  而不是xpath or css 表达式
-		#dl.add_value('url',response.url)
-		yield dl.load_item()
+		dl.add_value('url',response.url)
+		item = dl.load_item()
+		yield  item
